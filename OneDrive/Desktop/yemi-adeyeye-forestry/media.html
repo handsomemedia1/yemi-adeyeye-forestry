@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/loader.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/components/navigation.css">
@@ -41,6 +42,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- PREMIUM Loading Indicator -->
     <div id="loader" class="loader">
         <div class="loader-particles">
@@ -101,6 +105,9 @@
             </button>
         </div>
     </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
 
     <!-- Page Header -->
     <section class="page-header">
@@ -206,29 +213,6 @@
                     </div>
                 </article>
 
-                <!-- GFAR Profile & News -->
-                <article class="media-card" data-category="news" data-aos="fade-up">
-                    <div class="media-image">
-                        <img src="assets/images/media/YemiYPARDDICRECTOR.jpg"
-                             alt="YPARD Director Announcement">
-                        <div class="media-type">
-                            <i class="fas fa-newspaper"></i> Feature
-                        </div>
-                    </div>
-                    <div class="media-content">
-                        <h3>Welcoming New YPARD Director Yemi Adeyeye</h3>
-                        <div class="media-source">
-                            <span>GFAIR Network</span>
-                        </div>
-                        <p class="media-date">2018</p>
-                        <p class="media-excerpt">Profile feature announcing Dr. Adeyeye's appointment as Director of YPARD (Young Professionals for Agricultural Development), detailing his global youth advocacy work and vision for engaging young professionals in sustainable development.</p>
-                        <a href="https://gfair.network/news/welcoming-new-ypard-director-yemi-adeyeye"
-                           target="_blank" rel="noopener noreferrer" class="read-more">
-                            View Profile <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-
                 <!-- YouTube Video: GLF Bonn 2020 -->
                 <article class="media-card" data-category="videos" data-aos="fade-up">
                     <div class="media-image">
@@ -271,29 +255,6 @@
                         <a href="https://www.youtube.com/watch?v=k_l5nNTKbk8"
                            target="_blank" rel="noopener noreferrer" class="read-more">
                             Watch Interview <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- YouTube Video: The First Time Poem -->
-                <article class="media-card" data-category="videos" data-aos="fade-up">
-                    <div class="media-image">
-                        <img src="https://img.youtube.com/vi/a4xG__cIe3A/maxresdefault.jpg"
-                             alt="The First Time: Opening Poem for Rights to Equality">
-                        <div class="media-type">
-                            <i class="fas fa-video"></i> Performance
-                        </div>
-                    </div>
-                    <div class="media-content">
-                        <h3>The First Time: Opening Poem for Rights to Equality</h3>
-                        <div class="media-source">
-                            <span>Global Landscapes Forum (GLF) Bonn</span>
-                        </div>
-                        <p class="media-date">2019</p>
-                        <p class="media-excerpt">Spoken word performance at GLF Bonn 2019 opening ceremony on rights to equality and environmental justice.</p>
-                        <a href="https://www.youtube.com/watch?v=a4xG__cIe3A"
-                           target="_blank" rel="noopener noreferrer" class="read-more">
-                            Watch Performance <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
@@ -344,28 +305,7 @@
                     </div>
                 </article>
 
-                <!-- YouTube Video: Their Say -->
-                <article class="media-card" data-category="videos" data-aos="fade-up">
-                    <div class="media-image">
-                        <img src="https://img.youtube.com/vi/rPctdy1aS5w/maxresdefault.jpg"
-                             alt="Their Say - Engaging the Youth">
-                        <div class="media-type">
-                            <i class="fas fa-video"></i> Advocacy
-                        </div>
-                    </div>
-                    <div class="media-content">
-                        <h3>Their Say | Yemi Adeyeye, YPARD | Engaging the Youth</h3>
-                        <div class="media-source">
-                            <span>YPARD</span>
-                        </div>
-                        <p class="media-date">2018</p>
-                        <p class="media-excerpt">Advocacy segment on the role of youth in a sustainable future and engaging young professionals in agricultural development.</p>
-                        <a href="https://www.youtube.com/watch?v=rPctdy1aS5w"
-                           target="_blank" rel="noopener noreferrer" class="read-more">
-                            Watch Video <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
+                
 
                 <!-- YouTube Video: IFSS 2014 Presentation -->
                 <article class="media-card" data-category="videos" data-aos="fade-up">
@@ -386,6 +326,119 @@
                         <a href="https://www.youtube.com/watch?v=zLcJnCicYg4"
                            target="_blank" rel="noopener noreferrer" class="read-more">
                             Watch Presentation <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- YouTube Video: Communications and Climate Justice -->
+                <article class="media-card" data-category="videos" data-aos="fade-up">
+                    <div class="media-image">
+                        <img src="https://img.youtube.com/vi/CedmKOWG2Gg/maxresdefault.jpg"
+                             alt="Communications and Climate Justice - Barcelona School of Management">
+                        <div class="media-type">
+                            <i class="fas fa-video"></i> Video
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <h3>Communications and Climate Justice</h3>
+                        <div class="media-source">
+                            <span>Barcelona School of Management</span>
+                        </div>
+                        <p class="media-date">2021</p>
+                        <p class="media-excerpt">Discussion on effective communication strategies for climate justice and environmental advocacy.</p>
+                        <a href="https://www.youtube.com/watch?v=CedmKOWG2Gg"
+                           target="_blank" rel="noopener noreferrer" class="read-more">
+                            Watch Video <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- YouTube Video: Green Jobs Teaser -->
+                <article class="media-card" data-category="videos" data-aos="fade-up">
+                    <div class="media-image">
+                        <img src="https://img.youtube.com/vi/3aIEn9FLyyw/maxresdefault.jpg"
+                             alt="Teaser of #20 on Green Jobs featuring Xiaoxiao Wang and Yemi Adeyeye">
+                        <div class="media-type">
+                            <i class="fas fa-video"></i> Video
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <h3>Teaser of #20 on Green Jobs</h3>
+                        <div class="media-source">
+                            <span>FAO - Featuring Xiaoxiao Wang & Yemi Adeyeye</span>
+                        </div>
+                        <p class="media-date">2021</p>
+                        <p class="media-excerpt">Preview of episode #20 discussing green jobs and sustainable employment in forestry and environmental sectors.</p>
+                        <a href="https://www.youtube.com/watch?v=3aIEn9FLyyw"
+                           target="_blank" rel="noopener noreferrer" class="read-more">
+                            Watch Video <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- Here Are Some of Windsor's Oldest Trees -->
+                <article class="media-card" data-category="news" data-aos="fade-up">
+                    <div class="media-image">
+                        <img src="assets/images/media/Oldesttree.png" alt="Windsor's Oldest Trees" loading="lazy">
+                        <div class="media-type">
+                            <i class="fas fa-newspaper"></i> News
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <h3>Here Are Some of Windsor's Oldest Trees and How the City Plans to Protect Them</h3>
+                        <div class="media-source">
+                            <span>CBC News</span>
+                        </div>
+                        <p class="media-date">June 30, 2025</p>
+                        <p class="media-excerpt">CBC article featuring Dr. Adeyeye identifying historic trees in Windsor and outlining preservation plans under the urban forest management strategy.</p>
+                        <a href="https://www.cbc.ca/news/canada/windsor/windsor-trees-urban-forest-management-plan-1.7572757"
+                           target="_blank" rel="noopener noreferrer" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Windsor Tree Planting Requests Online -->
+                <article class="media-card" data-category="news" data-aos="fade-up">
+                    <div class="media-image">
+                        <img src="assets/images/media/yahootreeplantingimage.png" alt="Windsor Tree Planting" loading="lazy">
+                        <div class="media-type">
+                            <i class="fas fa-newspaper"></i> News
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <h3>Windsor, Ont., takes tree planting requests online — 1,400 expected in the ground this spring</h3>
+                        <div class="media-source">
+                            <span>CBC News</span>
+                        </div>
+                        <p class="media-date">April 9, 2024</p>
+                        <p class="media-excerpt">CBC News article featuring Dr. Adeyeye discussing Windsor's online tree planting application process, tree equity initiatives, and the city's urban canopy improvement plans with 1,400 trees expected this spring.</p>
+                        <a href="https://ca.news.yahoo.com/windsor-ont-takes-tree-planting-090040881.html"
+                           target="_blank" rel="noopener noreferrer" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- City Trimming About 10,000 Trees a Year -->
+                <article class="media-card" data-category="news" data-aos="fade-up">
+                    <div class="media-image">
+                        <img src="assets/images/media/Citytreetrimming.png" alt="Windsor Tree Maintenance" loading="lazy">
+                        <div class="media-type">
+                            <i class="fas fa-newspaper"></i> News
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <h3>City trimming about 10,000 trees a year in maintenance program</h3>
+                        <div class="media-source">
+                            <span>CTV News Windsor</span>
+                        </div>
+                        <p class="media-date">June 25, 2025</p>
+                        <p class="media-excerpt">CTV News article highlighting Dr. Adeyeye's leadership of Windsor's proactive tree maintenance program, featuring a seven-year trimming cycle for 70,000 street trees with specific clearance guidelines and safety standards.</p>
+                        <a href="https://www.ctvnews.ca/windsor/article/city-trimming-about-10000-trees-a-year-in-maintenance-program/"
+                           target="_blank" rel="noopener noreferrer" class="read-more">
+                            Read Article <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
@@ -629,6 +682,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
@@ -678,6 +733,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="assets/js/forest-loader.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/pages/media.js"></script>
@@ -729,50 +785,6 @@
                 });
             }
             
-            // Media filtering
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const mediaCards = document.querySelectorAll('.media-card');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Get filter value
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Filter media cards
-                    mediaCards.forEach(card => {
-                        if (filter === 'all') {
-                            card.style.display = 'block';
-                            
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 10);
-                        } else {
-                            const categories = card.getAttribute('data-category');
-                            
-                            if (categories && categories.includes(filter)) {
-                                card.style.display = 'block';
-                                
-                                setTimeout(() => {
-                                    card.style.opacity = '1';
-                                    card.style.transform = 'translateY(0)';
-                                }, 10);
-                            } else {
-                                card.style.opacity = '0';
-                                card.style.transform = 'translateY(20px)';
-                                
-                                setTimeout(() => {
-                                    card.style.display = 'none';
-                                }, 300);
-                            }
-                        }
-                    });
-                });
-            });
         });
     </script>
 </body>

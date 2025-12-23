@@ -20,7 +20,7 @@
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 
     <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: http:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: http:; connect-src 'self' https://*.tile.openstreetmap.org; frame-ancestors 'self'; base-uri 'self'; form-action 'self';">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="profile">
@@ -48,25 +48,49 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
     
-    <!-- Fonts -->
+    <!-- DNS Prefetch & Preconnect for Performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     
     <!-- Stylesheets -->
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="assets/css/loader.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/components/navigation.css">
-    <link rel="stylesheet" href="assets/css/components/buttons.css">
-    <link rel="stylesheet" href="assets/css/components/cards.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/layout-improvements.css">
-    <link rel="stylesheet" href="assets/css/professional-reorganization.css">
-    <link rel="stylesheet" href="assets/css/impact-animations.css">
-    <link rel="stylesheet" href="assets/css/forest-audio.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Deferred CSS - Load after page renders -->
+    <link rel="preload" href="assets/css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/components/buttons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/components/cards.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/layout-improvements.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/professional-reorganization.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/impact-animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/forest-audio.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/animations.css">
+        <link rel="stylesheet" href="assets/css/components/buttons.css">
+        <link rel="stylesheet" href="assets/css/components/cards.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/layout-improvements.css">
+        <link rel="stylesheet" href="assets/css/professional-reorganization.css">
+        <link rel="stylesheet" href="assets/css/impact-animations.css">
+        <link rel="stylesheet" href="assets/css/forest-audio.css">
+    </noscript>
+
+    <!-- Font Awesome - Deferred -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
     <!-- JSON-LD Structured Data for Google Knowledge Graph -->
     <script type="application/ld+json">
@@ -119,6 +143,9 @@
     </script>
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- PREMIUM Loading Indicator -->
     <div id="loader" class="loader">
         <div class="loader-particles">
@@ -136,6 +163,13 @@
                 <div class="loader-glow"></div>
                 <div class="loader-ring">
                     <svg viewBox="0 0 250 250">
+                        <defs>
+                            <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#B7E4C7;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#95D5B2;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#74C69D;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
                         <circle class="ring-bg" cx="125" cy="125" r="120"></circle>
                         <circle class="ring-progress" cx="125" cy="125" r="120"></circle>
                     </svg>
@@ -180,14 +214,16 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <main id="main-content">
+
     <!-- Hero Section -->
     <!-- Hero Section with Video Background and Profile Image -->
 <section class="hero-section" id="hero">
     <!-- Video Background -->
     <div class="hero-video-container">
-        <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
-            <source src="assets/videos/forest-hero.mp4" type="video/mp4">
-            <source src="assets/videos/forest-hero.webm" type="video/webm">
+        <video autoplay muted loop playsinline class="hero-video" id="heroVideo" preload="none" loading="lazy" poster="assets/images/profile/deepforestimage.png">
+            <source data-src="assets/videos/forest-hero.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
     </div>
@@ -206,16 +242,10 @@
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <div class="path-indicator">~/forestry/professional/portfolio</div>
-                
                 <h1 class="hero-title">
                     Yemi Adeyeye, Ph.D.
                 </h1>
-                
-                <h2 class="hero-subtitle">
-                    City Forester & Manager of Forestry and Natural Areas
-                </h2>
-                
+
                 <p class="hero-description">
                     Driving sustainable development and community engagement through forestry leadership and environmental governance.
                 </p>
@@ -234,7 +264,7 @@
             <!-- Profile Image -->
             <div class="hero-profile">
                 <div class="profile-image-container">
-                    <img src="assets/images/profile/dr-adeyeye-mountain.jpg" alt="Dr. Yemi Adeyeye" class="profile-image">
+                    <img src="assets/images/profile/dr-adeyeye-mountain.jpg" alt="Dr. Yemi Adeyeye" class="profile-image" loading="eager">
                     <div class="profile-accent"></div>
                 </div>
             </div>
@@ -249,37 +279,190 @@
     </div>
 </section>
 
-    <!-- Expertise Section -->
-    <section class="expertise-section" id="expertise">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Areas of Expertise</h2>
-                <p class="section-subtitle">Bridging science, policy, and community for sustainable forest management</p>
+    <!-- Expertise Section - Compact Home Version -->
+    <section class="expertise-section" id="expertise" style="background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(27, 67, 50, 0.85)), url('assets/images/profile/deepforestimage.png'); background-size: cover; background-position: center; background-attachment: fixed; padding: 80px 0; position: relative; overflow: hidden;">
+
+        <!-- Decorative Background Elements -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <h2 class="section-title" style="font-size: 2.8rem; color: #B7E4C7; margin-bottom: 15px; font-weight: 700;"> Areas of Expertise</h2>
+                <p class="section-subtitle" style="font-size: 1.2rem; color: #D8F3DC; max-width: 700px; margin: 0 auto;">Bridging science, policy, and community for sustainable forest management</p>
             </div>
-            
-            <div class="card-grid">
-                <div class="expertise-card" data-aos="fade-up">
-                    <div class="card-icon">
-                        <i class="fas fa-city" style="font-size: 48px; color: #1B4332;"></i>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 50px;">
+                <!-- Area 1 -->
+                <div data-aos="fade-up" style="background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%); border-radius: 20px; padding: 35px; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+                    <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: linear-gradient(135deg, #B7E4C7 0%, #95D5B2 100%); border-radius: 50%; opacity: 0.2;"></div>
+                    <div style="position: relative; z-index: 1;">
+                        <div style="background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%); width: 70px; height: 70px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(27,67,50,0.3);">
+                            <i class="fas fa-tree" style="font-size: 35px; color: white;"></i>
+                        </div>
+
+                        <h3 style="font-size: 1.5rem; color: #1B4332; margin-bottom: 15px; font-weight: 700; line-height: 1.3;">Natural Resources Management</h3>
+                        <p style="color: #52796F; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Local and global perspectives in sustainable forest management and conservation</p>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                            <div style="background: #F1FAEE; padding: 15px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #1B4332;">$400M</div>
+                                <div style="font-size: 0.85rem; color: #52796F; margin-top: 5px;">Portfolio Value</div>
+                            </div>
+                            <div style="background: #F1FAEE; padding: 15px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #1B4332;">20 Yrs</div>
+                                <div style="font-size: 0.85rem; color: #52796F; margin-top: 5px;">Master Plan</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid #E8F3ED;">
+                            <div style="color: #2D6A4F; font-size: 0.9rem; margin-bottom: 8px;"><i class="fas fa-briefcase" style="color: #40916C; margin-right: 8px;"></i><strong>City of Windsor</strong> • Canada</div>
+                            <div style="color: #2D6A4F; font-size: 0.9rem;"><i class="fas fa-search" style="color: #40916C; margin-right: 8px;"></i><strong>Fundación Natura</strong> • Bolivia</div>
+                        </div>
                     </div>
-                    <h3>Urban Forestry</h3>
-                    <p>Strategic planning and management of urban tree canopy, enhancing green infrastructure for livable cities.</p>
                 </div>
 
-                <div class="expertise-card" data-aos="fade-up">
-                    <div class="card-icon">
-                        <i class="fas fa-balance-scale" style="font-size: 48px; color: #1B4332;"></i>
+                <!-- Area 2 -->
+                <div data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%); border-radius: 20px; padding: 35px; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+                    <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: linear-gradient(135deg, #B7E4C7 0%, #95D5B2 100%); border-radius: 50%; opacity: 0.2;"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%); width: 70px; height: 70px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(27,67,50,0.3);">
+                            <i class="fas fa-balance-scale" style="font-size: 35px; color: white;"></i>
+                        </div>
+
+                        <h3 style="font-size: 1.5rem; color: #1B4332; margin-bottom: 15px; font-weight: 700; line-height: 1.3;">International Forest Policy</h3>
+                        <p style="color: #52796F; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Youth engagement, advocacy, and environmental policy research at global forums</p>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                            <div style="background: #F1FAEE; padding: 15px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #1B4332;">6,000</div>
+                                <div style="font-size: 0.85rem; color: #52796F; margin-top: 5px;">Youth Mobilized</div>
+                            </div>
+                            <div style="background: #F1FAEE; padding: 15px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #1B4332;">6</div>
+                                <div style="font-size: 0.85rem; color: #52796F; margin-top: 5px;">Languages</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid #E8F3ED;">
+                            <div style="color: #2D6A4F; font-size: 0.9rem; margin-bottom: 8px;"><i class="fas fa-globe" style="color: #40916C; margin-right: 8px;"></i><strong>FAO World Forestry Congress</strong></div>
+                            <div style="color: #2D6A4F; font-size: 0.9rem;"><i class="fas fa-book-open" style="color: #40916C; margin-right: 8px;"></i><strong>Multiple Publications</strong></div>
+                        </div>
                     </div>
-                    <h3>Environmental Governance</h3>
-                    <p>Multi-stakeholder engagement and policy development for sustainable natural resource management.</p>
                 </div>
 
-                <div class="expertise-card" data-aos="fade-up">
-                    <div class="card-icon">
-                        <i class="fas fa-seedling" style="font-size: 48px; color: #1B4332;"></i>
+                <!-- Area 3 -->
+                <div data-aos="fade-up" data-aos-delay="200" style="background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%); border-radius: 20px; padding: 35px; position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+                    <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: linear-gradient(135deg, #B7E4C7 0%, #95D5B2 100%); border-radius: 50%; opacity: 0.2;"></div>
+
+                    <div style="position: relative; z-index: 1;">
+                        <div style="background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%); width: 70px; height: 70px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(27,67,50,0.3);">
+                            <i class="fas fa-handshake" style="font-size: 35px; color: white;"></i>
+                        </div>
+
+                        <h3 style="font-size: 1.5rem; color: #1B4332; margin-bottom: 15px; font-weight: 700; line-height: 1.3;">Multi-Stakeholder Initiatives</h3>
+                        <p style="color: #52796F; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Global coordination of landscape restoration and international cooperation platforms</p>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                            <div style="background: #F1FAEE; padding: 15px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #1B4332;">$5M</div>
+                                <div style="font-size: 0.85rem; color: #52796F; margin-top: 5px;">Funding Secured</div>
+                            </div>
+                            <div style="background: #F1FAEE; padding: 15px; border-radius: 10px; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #1B4332;">100+</div>
+                                <div style="font-size: 0.85rem; color: #52796F; margin-top: 5px;">Coordinators</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid #E8F3ED;">
+                            <div style="color: #2D6A4F; font-size: 0.9rem; margin-bottom: 8px;"><i class="fas fa-network-wired" style="color: #40916C; margin-right: 8px;"></i><strong>GLFx Network</strong> • Global</div>
+                            <div style="color: #2D6A4F; font-size: 0.9rem;"><i class="fas fa-seedling" style="color: #40916C; margin-right: 8px;"></i><strong>YPARD Director</strong> • FAO</div>
+                        </div>
                     </div>
-                    <h3>Ecosystem Restoration</h3>
-                    <p>Leading landscape restoration initiatives aligned with UN Decade goals for biodiversity recovery.</p>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="about.html" style="display: inline-block; background: #F8FBF9; color: #1B4332; padding: 18px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; box-shadow: 0 4px 20px rgba(255,255,255,0.3); transition: all 0.3s ease;">
+                    <span>View Detailed Accomplishments</span>
+                    <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizational Affiliations Section -->
+    <section class="affiliations-section" style="background: #F8FBF9; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 class="section-title" style="font-size: 2.5rem; color: #1B4332; margin-bottom: 15px;">Organizational Affiliations</h2>
+                <p class="section-subtitle" style="font-size: 1.1rem; color: #52796F; max-width: 750px; margin: 0 auto; line-height: 1.6;">Throughout Yemi's professional career, he has been affiliated with several organizations actively advancing the global environmental agenda.</p>
+            </div>
+
+            <div class="affiliations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; max-width: 1000px; margin: 0 auto;">
+                <div class="affiliation-item" data-aos="fade-up" style="background: linear-gradient(135deg, #f8faf9 0%, #e8f3ed 100%); border: 2px solid #B7E4C7; border-radius: 12px; padding: 25px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px;">
+                    <div class="affiliation-logo" style="width: 100%; max-width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; position: relative;">
+                        <img src="assets/images/logos/fao-logo.png" alt="FAO Logo" class="org-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-icon').style.display='flex';">
+                        <i class="fas fa-building fallback-icon" style="font-size: 36px; color: #40916C; display: none;"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; color: #1B4332; margin: 0; font-weight: 600;">FAO</h4>
+                </div>
+                <div class="affiliation-item" data-aos="fade-up" data-aos-delay="50" style="background: linear-gradient(135deg, #f8faf9 0%, #e8f3ed 100%); border: 2px solid #B7E4C7; border-radius: 12px; padding: 25px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px;">
+                    <div class="affiliation-logo" style="width: 100%; max-width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; position: relative;">
+                        <img src="assets/images/logos/un-logo.png" alt="United Nations Logo" class="org-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-icon').style.display='flex';">
+                        <i class="fas fa-globe fallback-icon" style="font-size: 36px; color: #40916C; display: none;"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; color: #1B4332; margin: 0; font-weight: 600;">United Nations</h4>
+                </div>
+                <div class="affiliation-item" data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(135deg, #f8faf9 0%, #e8f3ed 100%); border: 2px solid #B7E4C7; border-radius: 12px; padding: 25px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px;">
+                    <div class="affiliation-logo" style="width: 100%; max-width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; position: relative;">
+                        <img src="assets/images/logos/cifor-icraf-logo.png" alt="CIFOR-ICRAF Logo" class="org-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-icon').style.display='flex';">
+                        <i class="fas fa-tree fallback-icon" style="font-size: 36px; color: #40916C; display: none;"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; color: #1B4332; margin: 0; font-weight: 600;">CIFOR-ICRAF</h4>
+                </div>
+                <div class="affiliation-item" data-aos="fade-up" data-aos-delay="150" style="background: linear-gradient(135deg, #f8faf9 0%, #e8f3ed 100%); border: 2px solid #B7E4C7; border-radius: 12px; padding: 25px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px;">
+                    <div class="affiliation-logo" style="width: 100%; max-width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; position: relative;">
+                        <img src="assets/images/logos/glf-logo.png" alt="Global Landscapes Forum Logo" class="org-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-icon').style.display='flex';">
+                        <i class="fas fa-mountain fallback-icon" style="font-size: 36px; color: #40916C; display: none;"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; color: #1B4332; margin: 0; font-weight: 600;">Global Landscape Forum</h4>
+                </div>
+                <div class="affiliation-item" data-aos="fade-up" data-aos-delay="200" style="background: linear-gradient(135deg, #f8faf9 0%, #e8f3ed 100%); border: 2px solid #B7E4C7; border-radius: 12px; padding: 25px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px;">
+                    <div class="affiliation-logo" style="width: 100%; max-width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; position: relative;">
+                        <img src="assets/images/logos/iufro-logo.png" alt="IUFRO Logo" class="org-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-icon').style.display='flex';">
+                        <i class="fas fa-leaf fallback-icon" style="font-size: 36px; color: #40916C; display: none;"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; color: #1B4332; margin: 0; font-weight: 600;">IUFRO</h4>
+                </div>
+                <div class="affiliation-item" data-aos="fade-up" data-aos-delay="250" style="background: linear-gradient(135deg, #f8faf9 0%, #e8f3ed 100%); border: 2px solid #B7E4C7; border-radius: 12px; padding: 25px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px;">
+                    <div class="affiliation-logo" style="width: 100%; max-width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; position: relative;">
+                        <img src="assets/images/logos/ypard-logo.png" alt="YPARD Logo" class="org-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-icon').style.display='flex';">
+                        <i class="fas fa-seedling fallback-icon" style="font-size: 36px; color: #40916C; display: none;"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; color: #1B4332; margin: 0; font-weight: 600;">YPARD</h4>
+                </div>
+                <div class="affiliation-item" data-aos="fade-up" data-aos-delay="300" style="background: linear-gradient(135deg, #f8faf9 0%, #e8f3ed 100%); border: 2px solid #B7E4C7; border-radius: 12px; padding: 25px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px;">
+                    <div class="affiliation-logo" style="width: 100%; max-width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; position: relative;">
+                        <img src="assets/images/logos/windsor-logo.png" alt="City of Windsor Logo" class="org-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-icon').style.display='flex';">
+                        <i class="fas fa-city fallback-icon" style="font-size: 36px; color: #40916C; display: none;"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; color: #1B4332; margin: 0; font-weight: 600;">The Corporation of the City of Windsor</h4>
+                </div>
+                <div class="affiliation-item" data-aos="fade-up" data-aos-delay="350" style="background: linear-gradient(135deg, #f8faf9 0%, #e8f3ed 100%); border: 2px solid #B7E4C7; border-radius: 12px; padding: 25px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px;">
+                    <div class="affiliation-logo" style="width: 100%; max-width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; position: relative;">
+                        <img src="assets/images/logos/expertise-france-logo.png" alt="Expertise France Logo" class="org-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-icon').style.display='flex';">
+                        <i class="fas fa-handshake fallback-icon" style="font-size: 36px; color: #40916C; display: none;"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; color: #1B4332; margin: 0; font-weight: 600;">Expertise France</h4>
+                </div>
+                <div class="affiliation-item" data-aos="fade-up" data-aos-delay="400" style="background: linear-gradient(135deg, #f8faf9 0%, #e8f3ed 100%); border: 2px solid #B7E4C7; border-radius: 12px; padding: 25px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px;">
+                    <div class="affiliation-logo" style="width: 100%; max-width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; position: relative;">
+                        <img src="assets/images/logos/sdc-logo.png" alt="SDC Logo" class="org-logo" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-icon').style.display='flex';">
+                        <i class="fas fa-hands-helping fallback-icon" style="font-size: 36px; color: #40916C; display: none;"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; color: #1B4332; margin: 0; font-weight: 600;">SDC</h4>
                 </div>
             </div>
         </div>
@@ -290,77 +473,52 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Global Forest Impact</h2>
-                <p class="section-subtitle">Making a difference across continents</p>
+                <p class="section-subtitle">Professional History Features</p>
             </div>
-            
+
             <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="72">72+</div>
+                    <div class="stat-label">Projects Implementation Across Countries</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">50+</div>
+                    <div class="stat-label">Employment and Collaboration with Organizations Globally</div>
+                </div>
                 <div class="stat-item">
                     <div class="stat-number" data-count="5">5</div>
                     <div class="stat-label">Continents</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="72">72</div>
-                    <div class="stat-label">Countries</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="25000">25,000</div>
-                    <div class="stat-label">Trees Planted</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="6000">6,000</div>
-                    <div class="stat-label">Youth Engaged</div>
-                </div>
             </div>
             
             <div class="world-map">
-                <div class="map-container">
-                    <svg id="world-map-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Simplified world map with continents -->
-                        <!-- North America -->
-                        <path class="country-path active" d="M120,80 L180,70 L220,90 L240,100 L250,140 L230,180 L200,200 L160,190 L140,160 L130,120 Z" />
-
-                        <!-- South America -->
-                        <path class="country-path active" d="M230,240 L260,230 L280,250 L290,290 L280,340 L260,380 L240,360 L230,320 L220,280 Z" />
-
-                        <!-- Europe -->
-                        <path class="country-path active" d="M480,100 L520,90 L550,110 L540,140 L510,150 L490,140 L470,120 Z" />
-
-                        <!-- Africa -->
-                        <path class="country-path active" d="M460,180 L520,170 L560,190 L570,240 L560,290 L520,320 L480,310 L460,270 L450,220 Z" />
-
-                        <!-- Asia -->
-                        <path class="country-path active" d="M580,80 L680,70 L740,90 L780,110 L800,140 L790,180 L760,200 L720,210 L680,200 L640,180 L600,160 L570,130 Z" />
-
-                        <!-- Australia -->
-                        <path class="country-path active" d="M720,320 L780,310 L810,330 L800,360 L770,370 L730,360 Z" />
-
-                        <!-- Additional regions for visual completeness -->
-                        <circle class="country-path active" cx="150" cy="130" r="8" />
-                        <circle class="country-path active" cx="250" cy="280" r="8" />
-                        <circle class="country-path active" cx="510" cy="120" r="8" />
-                        <circle class="country-path active" cx="520" cy="250" r="8" />
-                        <circle class="country-path active" cx="700" cy="140" r="8" />
-                        <circle class="country-path active" cx="760" cy="340" r="8" />
-
-                        <!-- Connection lines showing global network -->
-                        <line x1="150" y1="130" x2="510" y2="120" stroke="#10b981" stroke-width="1" opacity="0.3" />
-                        <line x1="510" y1="120" x2="700" y2="140" stroke="#10b981" stroke-width="1" opacity="0.3" />
-                        <line x1="250" y1="280" x2="520" y2="250" stroke="#10b981" stroke-width="1" opacity="0.3" />
-                        <line x1="700" y1="140" x2="760" y2="340" stroke="#10b981" stroke-width="1" opacity="0.3" />
-                    </svg>
+                <div class="map-container" id="worldMapContainer">
+                    <!-- Leaflet Map will be initialized here -->
                 </div>
                 <div class="map-legend">
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: #34d399;"></div>
-                        <span>Active Projects</span>
+                    <div class="legend-item active" data-category="current">
+                        <div class="legend-color" style="background: #EF4444;"></div>
+                        <span>Current Location (1)</span>
                     </div>
-                    <div class="legend-item">
+                    <div class="legend-item active" data-category="education">
+                        <div class="legend-color" style="background: #3B82F6;"></div>
+                        <span>Education (6)</span>
+                    </div>
+                    <div class="legend-item active" data-category="project">
                         <div class="legend-color" style="background: #10b981;"></div>
-                        <span>Partner Networks</span>
+                        <span>Projects (10)</span>
                     </div>
-                    <div class="legend-item">
-                        <div class="legend-color" style="background: #064e3b;"></div>
-                        <span>72 Countries Reached</span>
+                    <div class="legend-item active" data-category="conference">
+                        <div class="legend-color" style="background: #F59E0B;"></div>
+                        <span>Conferences & Speaking (7)</span>
+                    </div>
+                    <div class="legend-item active" data-category="organization">
+                        <div class="legend-color" style="background: #8B5CF6;"></div>
+                        <span>Organization Offices (4)</span>
+                    </div>
+                    <div class="legend-item active" data-category="media">
+                        <div class="legend-color" style="background: #EC4899;"></div>
+                        <span>Media & Interviews (2)</span>
                     </div>
                 </div>
             </div>
@@ -378,7 +536,7 @@
             <div class="project-cards">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/Project1.png" alt="Urban Forest Management">
+                        <img src="assets/images/projects/Project1.png" alt="Urban Forest Management" loading="lazy">
                         <div class="project-category">Urban Forestry</div>
                     </div>
                     <div class="project-content">
@@ -392,7 +550,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/GLFX.png" alt="GLFx Network">
+                        <img src="assets/images/projects/GLFX.png" alt="GLFx Network" loading="lazy">
                         <div class="project-category">Global Initiative</div>
                     </div>
                     <div class="project-content">
@@ -411,6 +569,8 @@
         </div>
     </section>
 
+    </section>
+
     <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
@@ -424,6 +584,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -473,11 +635,17 @@
     </footer>
 
     <!-- Scripts -->
+    <!-- Loader Script - Load First -->
+    <script src="assets/js/forest-loader.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="assets/js/security.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/impact-animations.js"></script>
     <script src="assets/js/forest-audio.js"></script>
+    <script src="assets/js/world-map.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({

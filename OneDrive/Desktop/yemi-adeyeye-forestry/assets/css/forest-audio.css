@@ -2,9 +2,9 @@
 
 .forest-audio-control {
     position: fixed;
-    bottom: 30px;
+    bottom: 100px;
     right: 30px;
-    z-index: 900;
+    z-index: 800;
     display: flex;
     flex-direction: column;
     gap: 10px;

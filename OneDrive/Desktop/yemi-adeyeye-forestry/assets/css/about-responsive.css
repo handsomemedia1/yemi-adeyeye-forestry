@@ -1,0 +1,582 @@
+/* About Page Responsive Enhancements */
+
+/* ==================================
+   Bio Section Responsiveness
+   ================================== */
+
+.bio-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.bio-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.bio-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.bio-stat {
+    text-align: center;
+    padding: 20px;
+    background: rgba(183, 228, 199, 0.1);
+    border-radius: 12px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1B4332;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.95rem;
+    color: #2D6A4F;
+    font-weight: 500;
+}
+
+/* ==================================
+   Education Section Responsiveness
+   ================================== */
+
+.education-container-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.academic-degrees-column h3,
+.certifications-column h3 {
+    font-size: 1.8rem;
+    color: #1B4332;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #52B788;
+}
+
+.degree-item {
+    padding: 30px;
+    background: #F8FBF9;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.degree-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.degree-item h4 {
+    font-size: 1.3rem;
+    color: #1B4332;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.degree-item .institution,
+.degree-item .years {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cert-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: #F8FBF9;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.cert-list-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cert-list-item i {
+    font-size: 24px;
+    color: #52B788;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cert-list-item span {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==================================
+   Expertise Section Responsiveness
+   ================================== */
+
+.expertise-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.expertise-modern-card {
+    background: #F8FBF9;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.expertise-modern-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.expertise-icon {
+    margin-bottom: 20px;
+}
+
+.expertise-modern-card h3 {
+    font-size: 1.5rem;
+    color: #1B4332;
+    margin-bottom: 20px;
+}
+
+.expertise-modern-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-modern-card ul li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    line-height: 1.6;
+}
+
+.expertise-modern-card ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #52B788;
+    font-weight: bold;
+}
+
+/* ==================================
+   Values Section Responsiveness
+   ================================== */
+
+.values-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.value-compact-card {
+    background: #F8FBF9;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.value-compact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.value-icon {
+    margin-bottom: 20px;
+}
+
+.value-compact-card h3 {
+    font-size: 1.5rem;
+    color: #1B4332;
+    margin-bottom: 15px;
+}
+
+.value-compact-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ==================================
+   Timeline Section
+   ================================== */
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #52B788, #1B4332);
+}
+
+.timeline-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-marker {
+    flex-shrink: 0;
+    width: 100px;
+    text-align: center;
+}
+
+.timeline-marker .year {
+    display: inline-block;
+    background: linear-gradient(135deg, #1B4332, #2D6A4F);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(27, 67, 50, 0.3);
+}
+
+.timeline-content {
+    flex: 1;
+    background: #F8FBF9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    color: #1B4332;
+    margin-bottom: 8px;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    color: #52B788;
+    margin-bottom: 12px;
+}
+
+.timeline-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ==================================
+   TABLET BREAKPOINT (768px - 1024px)
+   ================================== */
+
+@media (max-width: 1024px) {
+    .bio-content {
+        gap: 40px;
+    }
+
+    .education-container-wrapper {
+        gap: 40px;
+    }
+
+    .expertise-modern-grid,
+    .values-compact-grid {
+        gap: 25px;
+    }
+
+    .expertise-modern-card,
+    .value-compact-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Bio Section - Stack vertically */
+    .bio-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .bio-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .bio-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    /* Education - Stack vertically */
+    .education-container-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .academic-degrees-column h3,
+    .certifications-column h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .degree-item {
+        padding: 20px;
+    }
+
+    .degree-item h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Expertise - Single column */
+    .expertise-modern-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .expertise-modern-card {
+        padding: 25px;
+    }
+
+    .expertise-modern-card h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Values - Single column */
+    .values-compact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .value-compact-card {
+        padding: 25px;
+    }
+
+    .value-compact-card h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Timeline - Adjust for mobile */
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        gap: 20px;
+    }
+
+    .timeline-marker {
+        width: auto;
+    }
+
+    .timeline-marker .year {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1rem;
+    }
+}
+
+/* ==================================
+   MOBILE BREAKPOINT (< 480px)
+   ================================== */
+
+@media (max-width: 480px) {
+    /* Bio Stats - 3 columns but smaller */
+    .bio-stats {
+        gap: 10px;
+    }
+
+    .bio-stat {
+        padding: 15px 10px;
+    }
+
+    .stat-value {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    /* Education */
+    .degree-item {
+        padding: 15px;
+    }
+
+    .degree-item h4 {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .degree-item .institution,
+    .degree-item .years {
+        font-size: 0.9rem;
+    }
+
+    .cert-list-item {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .cert-list-item i {
+        font-size: 20px;
+    }
+
+    .cert-list-item span {
+        font-size: 0.9rem;
+    }
+
+    /* Expertise */
+    .expertise-modern-card {
+        padding: 20px;
+    }
+
+    .expertise-icon i {
+        font-size: 36px !important;
+    }
+
+    .expertise-modern-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .expertise-modern-card ul li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    /* Values */
+    .value-compact-card {
+        padding: 20px;
+    }
+
+    .value-icon i {
+        font-size: 36px !important;
+    }
+
+    .value-compact-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .value-compact-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Timeline - Very compact for small screens */
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .timeline-marker {
+        width: 100%;
+        text-align: left;
+    }
+
+    .timeline-marker .year {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+        margin-left: 30px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 0.95rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ==================================
+   CTA Section Responsive
+   ================================== */
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/loader.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/components/navigation.css">
@@ -41,6 +42,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- PREMIUM Loading Indicator -->
     <div id="loader" class="loader">
         <div class="loader-particles">
@@ -102,6 +106,9 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <main id="main-content">
+
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
@@ -126,7 +133,7 @@
                         <i class="fas fa-globe"></i> All Publications
                     </button>
                     <button class="filter-btn" data-filter="journal">
-                        <i class="fas fa-book"></i> Journal Articles
+                        <i class="fas fa-book"></i> Refereed Articles
                     </button>
                     <button class="filter-btn" data-filter="policy">
                         <i class="fas fa-file-alt"></i> Policy Briefs
@@ -135,7 +142,10 @@
                         <i class="fas fa-bookmark"></i> Book Chapters
                     </button>
                     <button class="filter-btn" data-filter="report">
-                        <i class="fas fa-chart-bar"></i> Reports
+                        <i class="fas fa-chart-bar"></i> Reports & Reviews
+                    </button>
+                    <button class="filter-btn" data-filter="presentation">
+                        <i class="fas fa-microphone"></i> Presentations & Lectures
                     </button>
                 </div>
                 
@@ -156,26 +166,29 @@
     <!-- Publications List -->
     <section class="publications-section">
         <div class="container">
+            <!-- Section Header for Refereed Publications -->
+            <div class="publications-section-header" style="margin-top: 40px; margin-bottom: 30px;">
+                <h2 class="section-subtitle" style="font-size: 1.5rem; color: #1B4332; font-weight: 600; border-bottom: 2px solid #B7E4C7; padding-bottom: 10px;">
+                    <i class="fas fa-certificate"></i> Refereed Publications (Peer-Reviewed)
+                </h2>
+            </div>
+            
             <div class="publications-list">
                 <!-- Featured Publication - PhD Research -->
                 <article class="publication-item featured" data-type="journal" data-aos="fade-up">
                     <div class="pub-year-badge">2019</div>
                     <div class="pub-content">
                         <h3 class="pub-title">
-                            Seeking procedural equity in global environmental governance: Indigenous participation
-                            and knowledge politics in forest and landscape restoration debates at the 2016 World Conservation Congress
+                            Seeking Procedural Equity in Global Environmental Governance: Indigenous Participation & Knowledge Politics in Forest and Landscape Restoration Debates at the 2016 World Conservation Congress
                         </h3>
-                        <p class="pub-authors">Adeyeye, Y., Hagerman, S., & Pelai, R.</p>
+                        <p class="pub-authors">Adeyeye, Y., Hagerman, S. & Pelai, R.</p>
                         <p class="pub-journal">
-                            <i class="fas fa-book-open"></i> Forest Policy and Economics,
-                            <span class="pub-volume">Volume 109</span>
+                            <i class="fas fa-book-open"></i> Forest Policy & Economics,
+                            <span class="pub-volume">Volume 109, 1-14</span>
                         </p>
 
                         <div class="pub-abstract">
-                            <p>This paper examines the intersections of power and knowledge in global environmental
-                            governance forums, with specific focus on Indigenous participation in forest and landscape
-                            restoration debates at the 2016 World Conservation Congress. Primary publication from PhD research
-                            on power dynamics and indigenous knowledge in global forestry governance.</p>
+                            <p>This paper examines the intersections of power and knowledge in global environmental governance forums, with specific focus on Indigenous participation in forest and landscape restoration debates at the 2016 World Conservation Congress. Primary publication from PhD research on power dynamics and indigenous knowledge in global forestry governance.</p>
                         </div>
 
                         <div class="pub-tags">
@@ -191,128 +204,85 @@
                         </div>
 
                         <div class="pub-actions">
-                            <a href="https://doi.org/10.1016/j.forpol.2019.102006" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-external-link-alt"></i> View at Elsevier
-                            </a>
-                            <a href="https://doi.org/10.1016/j.forpol.2019.102006" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-book-open"></i> DOI Link
+                            <a href="https://ideas.repec.org/a/eee/forpol/v109y2019ics1389934118302739.html" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-external-link-alt"></i> View Publication
                             </a>
                         </div>
                     </div>
                 </article>
-                
-                <!-- Regular Publications -->
 
-                <!-- PhD Thesis -->
-                <article class="publication-item" data-type="report" data-aos="fade-up">
-                    <div class="pub-year-badge">2019</div>
+                <!-- The use & usefulness of inventory-based management planning -->
+                <article class="publication-item" data-type="journal" data-aos="fade-up">
+                    <div class="pub-year-badge">2015</div>
                     <div class="pub-content">
                         <h3 class="pub-title">
-                            Power, people, places and spaces: examining the politics of participation across scales of resource governance
+                            The use & usefulness of inventory-based management planning to forest management: Evidence from community forestry in Nepal
                         </h3>
-                        <p class="pub-authors">Adeyeye, Yemi</p>
+                        <p class="pub-authors">Toft, M., Adeyeye, Y. & Lund, J.</p>
                         <p class="pub-journal">
-                            <i class="fas fa-graduation-cap"></i> PhD Thesis, University of British Columbia
+                            <i class="fas fa-book-open"></i> Forest Policy & Economics,
+                            <span class="pub-volume">Volume 60, 35-49</span>
                         </p>
 
                         <div class="pub-abstract">
-                            <p>Comprehensive doctoral research examining multi-stakeholder engagement and power dynamics in environmental governance across multiple scales. This thesis covers the politics of participation in resource governance, providing theoretical and empirical contributions to understanding procedural equity.</p>
+                            <p>Research examining the effectiveness of inventory-based management planning approaches in community forestry contexts, with evidence from Nepal's mid-hills region.</p>
                         </div>
 
                         <div class="pub-tags">
-                            <span class="tag">PhD Thesis</span>
-                            <span class="tag">Multi-stakeholder Engagement</span>
-                            <span class="tag">Power Dynamics</span>
-                            <span class="tag">Resource Governance</span>
+                            <span class="tag">Community Forestry</span>
+                            <span class="tag">Forest Management</span>
+                            <span class="tag">Nepal</span>
                         </div>
 
                         <div class="pub-actions">
-                            <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-external-link-alt"></i> View at UBC Circle
-                            </a>
-                            <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-download"></i> Download PDF
+                            <a href="https://ideas.repec.org/a/eee/forpol/v60y2015icp35-49.html" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-external-link-alt"></i> View Publication
                             </a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Urban Forestry Report -->
-                <article class="publication-item" data-type="report" data-aos="fade-up">
-                    <div class="pub-year-badge">2023</div>
+                <!-- Book Review: Alchemy in the Rain Forest -->
+                <article class="publication-item" data-type="journal" data-aos="fade-up">
+                    <div class="pub-year-badge">2017</div>
                     <div class="pub-content">
                         <h3 class="pub-title">
-                            Urban Forest Management Plan: Key Findings & Directions Report
+                            Book Review: Alchemy in the Rain Forest: Politics, Ecology & Resilience in a New Guinea Mining Area
                         </h3>
-                        <p class="pub-authors">City of Windsor Forestry Department</p>
+                        <p class="pub-authors">Adeyeye, Y.</p>
                         <p class="pub-journal">
-                            <i class="fas fa-file-contract"></i> City of Windsor Official Report
+                            <i class="fas fa-book-open"></i> International Forestry Review,
+                            <span class="pub-volume">Vol. 19, No. 1, 131-132</span>
                         </p>
 
                         <div class="pub-abstract">
-                            <p>Comprehensive 20-year strategic vision for urban forest management, including $400M asset valuation, ecosystem services analysis (i-Tree Eco methodology), and sustainable resource allocation framework. Contains detailed quantification of ecosystem services and CTLA-based structural valuation.</p>
+                            <p>Book review of Jerry Jacka's work examining the intersection of politics, ecology, and resilience in New Guinea mining areas.</p>
                         </div>
 
                         <div class="pub-tags">
-                            <span class="tag">Urban Forestry</span>
-                            <span class="tag">Ecosystem Services</span>
-                            <span class="tag">Asset Valuation</span>
-                            <span class="tag">Strategic Planning</span>
+                            <span class="tag">Book Review</span>
+                            <span class="tag">Mining</span>
+                            <span class="tag">Ecology</span>
                         </div>
 
                         <div class="pub-actions">
-                            <a href="https://letstalk.citywindsor.ca/ufmp" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-file-pdf"></i> View Report
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=yYJ4hL9kXG4" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-video"></i> Watch Overview
-                            </a>
+                            <span class="btn btn-text" style="opacity: 0.6; cursor: not-allowed;">
+                                <i class="fas fa-lock"></i> Journal Subscription Required
+                            </span>
                         </div>
                     </div>
                 </article>
 
-                <!-- Policy Brief -->
-                <article class="publication-item" data-type="policy" data-aos="fade-up">
-                    <div class="pub-year-badge">2021</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">
-                            Towards Post 2020 Biodiversity Framework: Green Jobs in Agri-food Systems
-                        </h3>
-                        <p class="pub-authors">Wang, X. & Adeyeye, Y.</p>
-                        <p class="pub-journal">
-                            <i class="fas fa-landmark"></i> YPARD, European Union & Expertise France
-                        </p>
-
-                        <div class="pub-abstract">
-                            <p>Policy brief produced during tenure as YPARD Director, addressing youth employment in agriculture and forestry sectors within the context of the post-2020 biodiversity framework. Cited in FAO discussions on green jobs and youth engagement.</p>
-                        </div>
-
-                        <div class="pub-tags">
-                            <span class="tag">Youth Employment</span>
-                            <span class="tag">Biodiversity</span>
-                            <span class="tag">Policy Brief</span>
-                            <span class="tag">Green Jobs</span>
-                        </div>
-
-                        <div class="pub-actions">
-                            <a href="https://ypard.net/resources" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-external-link-alt"></i> View at YPARD Resources
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Book Chapter -->
+                <!-- Book Chapter: Main Findings & Trends of Globalization -->
                 <article class="publication-item" data-type="book" data-aos="fade-up">
                     <div class="pub-year-badge">2018</div>
                     <div class="pub-content">
                         <h3 class="pub-title">
                             Main Findings & Trends of Globalization
                         </h3>
-                        <p class="pub-authors">Adeyeye, Y., Ye, J., Sra, S., & Adam, L.</p>
+                        <p class="pub-authors">Adeyeye, Y., Ye, J., Sra, S. & Adam, L.</p>
                         <p class="pub-journal">
-                            <i class="fas fa-book"></i> In: Forestry in the Midst of Global Changes,
-                            CRC Press, pp. 291-306
+                            <i class="fas fa-book"></i> In: Farcy, C., Martinez de Arano, I. & Rojas-Briales, E. (Eds.). Forestry in the Midst of Global Changes. CRC Press, Taylor & Francis Group, 1st Edition, pp. 291-306
                         </p>
 
                         <div class="pub-abstract">
@@ -327,47 +297,454 @@
                         </div>
 
                         <div class="pub-actions">
-                            <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9780429290718-17" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-book-reader"></i> View Chapter
-                            </a>
-                            <a href="https://www.taylorfrancis.com/books/edit/10.1201/9780429290718" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-external-link-alt"></i> View Book
+                            <a href="https://www.routledge.com/Forestry-in-the-Midst-of-Global-Changes/Farcy-Rojas-Briales-MartinezdeArano/p/book/9780367570736" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-book-reader"></i> View Book
                             </a>
                         </div>
                     </div>
                 </article>
 
-                <!-- GLFx Initiative Resources -->
-                <article class="publication-item" data-type="report" data-aos="fade-up">
-                    <div class="pub-year-badge">2021</div>
+                <!-- The Politics of Access, Utilization & Sharing -->
+                <article class="publication-item" data-type="journal" data-aos="fade-up">
+                    <div class="pub-year-badge">2015</div>
                     <div class="pub-content">
                         <h3 class="pub-title">
-                            GLFx: The Global Landscapes Forum Community - Charter and Methodology
+                            The Politics of Access, Utilization & Sharing: Lessons from the Ongo Community Forest, Uganda
                         </h3>
-                        <p class="pub-authors">Global Landscapes Forum & CIFOR</p>
+                        <p class="pub-authors">Adeyeye, Y., et al.</p>
                         <p class="pub-journal">
-                            <i class="fas fa-globe"></i> GLFx Network Initiative
+                            <i class="fas fa-book-open"></i> Journal of Forestry. 2014 SAF National Convention & CIF/IFC AGM & Conference, 136-139
                         </p>
 
                         <div class="pub-abstract">
-                            <p>Operational framework and methodology for the GLFx global network coordinated during tenure at CIFOR. Embeds youth engagement strategies in landscape restoration aligned with UN Decade goals. Documents the establishment of 150+ local chapters across 72 countries.</p>
+                            <p>Analysis of access, utilization, and sharing mechanisms in community forest management, drawing lessons from the Ongo Community Forest in Uganda.</p>
                         </div>
 
                         <div class="pub-tags">
-                            <span class="tag">Landscape Restoration</span>
-                            <span class="tag">Youth Engagement</span>
-                            <span class="tag">Global Network</span>
-                            <span class="tag">UN Partnership</span>
+                            <span class="tag">Community Forestry</span>
+                            <span class="tag">Uganda</span>
+                            <span class="tag">Access Rights</span>
                         </div>
 
                         <div class="pub-actions">
-                            <a href="https://glfx.globallandscapesforum.org/about" target="_blank" rel="noopener noreferrer" class="btn btn-text">
-                                <i class="fas fa-external-link-alt"></i> Visit GLFx About
+                            <span class="btn btn-text" style="opacity: 0.6; cursor: not-allowed;">
+                                <i class="fas fa-info-circle"></i> Conference Proceedings
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- The Rationales, Knowledge Forms & Biophysical Outcomes -->
+                <article class="publication-item" data-type="journal" data-aos="fade-up">
+                    <div class="pub-year-badge">2014</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            The Rationales, Knowledge Forms & Biophysical Outcomes of Community Forest Management in Nepal's Mid-Hills
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-book-open"></i> Tropentag 2014, Book of Abstracts. TROPENTAG 2014 - "Bridging the gap between increasing knowledge & decreasing resources", 2014-09-17 (292)
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Research examining the rationales, knowledge systems, and biophysical outcomes of community forest management practices in Nepal's mid-hills region.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Community Forestry</span>
+                            <span class="tag">Nepal</span>
+                            <span class="tag">Knowledge Systems</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <a href="https://www.tropentag.de/2014/abstract.php?code=CrBphCVt" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-external-link-alt"></i> View Abstract
                             </a>
                         </div>
                     </div>
                 </article>
-                
+
+                <!-- Forestry Education Serving Science & Practice -->
+                <article class="publication-item" data-type="journal" data-aos="fade-up">
+                    <div class="pub-year-badge">2014</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Forestry Education Serving Science & Practice (Session A-34)
+                        </h3>
+                        <p class="pub-authors">Paschalis-Jakubovicz, P., Lewark, S. & Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-book-open"></i> Sustaining Forests, Sustaining People: The Role of Research. XXIV IUFRO WC. Abstracts. International Forestry Review, Vol. 16, 98-99
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Conference presentation on forestry education and its role in bridging science and practice, presented at the XXIV IUFRO World Congress.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Forestry Education</span>
+                            <span class="tag">IUFRO</span>
+                            <span class="tag">Science-Practice Gap</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <span class="btn btn-text" style="opacity: 0.6; cursor: not-allowed;">
+                                <i class="fas fa-info-circle"></i> Conference Abstract
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+                <!-- Power, People, Places and Spaces -->
+                <article class="publication-item featured" data-type="journal" data-aos="fade-up">
+                    <div class="pub-year-badge">2020</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Power, People, Places and Spaces: Examining the Politics of Participation Across Scales of Resource Governance
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-graduation-cap"></i> PhD Thesis, University of British Columbia
+                        </p>
+                        <div class="pub-abstract">
+                            <p>PhD thesis exploring power structures that limit Indigenous participation in resource governance, including case studies from Bolivia and global forums. It analyzes intersections of power, people, and spaces in environmental interventions.</p>
+                        </div>
+                        <div class="pub-tags">
+                            <span class="tag">PhD Thesis</span>
+                            <span class="tag">Environmental Governance</span>
+                            <span class="tag">Indigenous Participation</span>
+                            <span class="tag">UBC</span>
+                        </div>
+                        <div class="pub-metrics">
+                            <span class="metric"><i class="fas fa-award"></i> UBC Public Scholars Award</span>
+                        </div>
+                        <div class="pub-actions">
+                            <a href="https://independent.academia.edu/YemiAdeyeye" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-external-link-alt"></i> View Thesis
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Researching for Social Justice -->
+                <article class="publication-item" data-type="presentation" data-aos="fade-up">
+                    <div class="pub-year-badge">2017</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Researching for Social Justice
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y., Feltes, E., Fraser, J. & et al.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-microphone"></i> PhDs Go Public Research Talk Series
+                        </p>
+                        <div class="pub-abstract">
+                            <p>Collaborative work on topics like Indigenous rights, mining, environmental interventions, and social issues.</p>
+                        </div>
+                        <div class="pub-tags">
+                            <span class="tag">Social Justice</span>
+                            <span class="tag">Indigenous Rights</span>
+                            <span class="tag">Environmental Interventions</span>
+                        </div>
+                        <div class="pub-actions">
+                            <span class="btn btn-text" style="opacity: 0.6; cursor: not-allowed;">
+                                <i class="fas fa-info-circle"></i> Public Lecture
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+
+            <!-- Section Header for Policy Briefs -->
+            <div class="publications-section-header" style="margin-top: 60px; margin-bottom: 30px;">
+                <h2 class="section-subtitle" style="font-size: 1.5rem; color: #1B4332; font-weight: 600; border-bottom: 2px solid #B7E4C7; padding-bottom: 10px;">
+                    <i class="fas fa-file-alt"></i> Policy Briefs
+                </h2>
+            </div>
+
+            <div class="publications-list">
+                <!-- Green Jobs in Agri-food Systems -->
+                <article class="publication-item" data-type="policy" data-aos="fade-up">
+                    <div class="pub-year-badge">2021</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Green Jobs in Agri-food Systems: Supporting Youth in Driving Transformative Change
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y. & Wang, X.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-file-alt"></i> Policy brief in development of the EU Post 2020 Biodiversity Framework
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Policy brief produced during tenure as YPARD Director, addressing youth employment in agriculture and forestry sectors within the context of the post-2020 biodiversity framework. Examines how young professionals can drive transformative change in agri-food systems through green jobs.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Youth Employment</span>
+                            <span class="tag">Biodiversity</span>
+                            <span class="tag">Policy Brief</span>
+                            <span class="tag">Green Jobs</span>
+                            <span class="tag">EU Framework</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <a href="https://issuu.com/post2020bd/docs/mobilization_of__20_final/1" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-external-link-alt"></i> View Policy Brief
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Section Header for Non-Refereed Contributions -->
+            <div class="publications-section-header" style="margin-top: 60px; margin-bottom: 30px;">
+                <h2 class="section-subtitle" style="font-size: 1.5rem; color: #1B4332; font-weight: 600; border-bottom: 2px solid #B7E4C7; padding-bottom: 10px;">
+                    <i class="fas fa-microphone"></i> Non-Refereed Contributions (Presentations & Lectures)
+                </h2>
+            </div>
+
+            <div class="publications-list">
+                <!-- Developing Urban Forest Management Plans (2023) -->
+                <article class="publication-item" data-type="presentation" data-aos="fade-up">
+                    <div class="pub-year-badge">2023</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Developing Urban Forest Management Plans
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-microphone"></i> Lecture delivered during the Ontario Urban Forest Council's Annual Conference 2023
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Conference presentation on developing comprehensive urban forest management plans, sharing insights from leading Windsor's $400M urban forest management strategy.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Urban Forestry</span>
+                            <span class="tag">Conference Presentation</span>
+                            <span class="tag">Strategic Planning</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <span class="btn btn-text" style="opacity: 0.6; cursor: not-allowed;">
+                                <i class="fas fa-info-circle"></i> Conference Presentation
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Communications and Climate Justice (2021) -->
+                <article class="publication-item" data-type="presentation" data-aos="fade-up">
+                    <div class="pub-year-badge">2021</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Communications and Climate Justice
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-microphone"></i> Invited Expert, Barcelona School of Management (ICTA-UAB)
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Expert presentation on the intersection of communications and climate justice, examining how effective communication strategies can advance climate justice initiatives.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Climate Justice</span>
+                            <span class="tag">Communications</span>
+                            <span class="tag">Expert Presentation</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <a href="https://www.youtube.com/watch?v=CedmKOWG2Gg" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-video"></i> Watch Presentation
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Forestry and the People of the Global Majority (2021) -->
+                <article class="publication-item" data-type="presentation" data-aos="fade-up">
+                    <div class="pub-year-badge">2021</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Forestry and the People of the Global Majority
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-microphone"></i> Lecture delivered during the 'Shifting the Forestry Paradigm: How Gender and Racial Diversity Fosters Resilience' session of the 2021 National Conference & 113th Annual General Meeting of the Canadian Institute of Forestry
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Keynote lecture examining how forestry can better serve and engage people of the global majority, addressing issues of diversity, equity, and inclusion in the forestry sector.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Diversity & Inclusion</span>
+                            <span class="tag">Forestry Paradigm</span>
+                            <span class="tag">CIF Conference</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <span class="btn btn-text" style="opacity: 0.6; cursor: not-allowed;">
+                                <i class="fas fa-info-circle"></i> Conference Presentation
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Forestry as a Space for Black People (2020) -->
+                <article class="publication-item" data-type="presentation" data-aos="fade-up">
+                    <div class="pub-year-badge">2020</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Forestry as a Space for Black People
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-microphone"></i> Invited Expert, University of British Columbia (UBC): Virtual Lunch in the Forest Webinar Series
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Webinar presentation exploring how forestry can become a more inclusive space for Black professionals and communities, addressing barriers and opportunities for engagement.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Diversity</span>
+                            <span class="tag">Inclusion</span>
+                            <span class="tag">UBC Webinar</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <a href="https://forestry.ubc.ca/events/nature-webinar-forestry-as-a-space-for-black-people/" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-external-link-alt"></i> View Webinar Info
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Bringing Lessons from African Countries to Scale (2020) -->
+                <article class="publication-item" data-type="presentation" data-aos="fade-up">
+                    <div class="pub-year-badge">2020</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Bringing Lessons from African Countries to Scale: How to Support Young Women to Drive Inclusive & Resilient Food Systems
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-microphone"></i> Invited Expert, CGIAR Gender Platform: Cultivate Africa 2020
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Panel discussion on supporting young women in African agriculture, examining strategies to scale successful initiatives and create inclusive, resilient food systems.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Youth Engagement</span>
+                            <span class="tag">Gender</span>
+                            <span class="tag">Food Systems</span>
+                            <span class="tag">Africa</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <a href="https://www.youtube.com/watch?v=0_eW95Iybag" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-video"></i> Watch Panel Discussion
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- "A new normal" at GLF Bonn 2020 -->
+                <article class="publication-item" data-type="presentation" data-aos="fade-up">
+                    <div class="pub-year-badge">2020</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Opening Plenary: "A new normal" – GLF Bonn 2020
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-microphone"></i> Keynote Address, Global Landscapes Forum Bonn 2020 (03/06/2020)
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Opening plenary keynote address at the Global Landscapes Forum Bonn 2020, discussing COVID-19, food systems, and the environment, and envisioning a "new normal" for sustainable landscapes.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Keynote</span>
+                            <span class="tag">GLF Bonn</span>
+                            <span class="tag">Food Systems</span>
+                            <span class="tag">COVID-19</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <a href="https://www.youtube.com/watch?v=SqdN-Fc1O6M" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-video"></i> Watch Keynote
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- A Tale of Two Schemes (2017) -->
+                <article class="publication-item" data-type="presentation" data-aos="fade-up">
+                    <div class="pub-year-badge">2017</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            A Tale of Two Schemes: Joint Mitigation & Adaptation Mechanism (JMAM) & Reciprocal Watershed Agreement (RWA) in Bolivia
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-microphone"></i> Public lecture delivered at the 2017 PhDs Go Public Research Talk Series - (Re)searching for Social Justice, April 2017
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Public lecture examining two different mechanisms for climate adaptation and mitigation in Bolivia, comparing the Joint Mitigation & Adaptation Mechanism (JMAM) and Reciprocal Watershed Agreement (RWA) approaches.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Climate Adaptation</span>
+                            <span class="tag">Bolivia</span>
+                            <span class="tag">Public Lecture</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <span class="btn btn-text" style="opacity: 0.6; cursor: not-allowed;">
+                                <i class="fas fa-info-circle"></i> Public Lecture
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tree Talk at the XIV World Forestry Congress (2015) -->
+                <article class="publication-item" data-type="presentation" data-aos="fade-up">
+                    <div class="pub-year-badge">2015</div>
+                    <div class="pub-content">
+                        <h3 class="pub-title">
+                            Tree Talk at the XIV World Forestry Congress 2015
+                        </h3>
+                        <p class="pub-authors">Adeyeye, Y.</p>
+                        <p class="pub-journal">
+                            <i class="fas fa-microphone"></i> Keynote Address, XIV World Forestry Congress - International UN Session (09/09/15)
+                        </p>
+
+                        <div class="pub-abstract">
+                            <p>Keynote presentation at the XIV World Forestry Congress in Durban, discussing the historic youth engagement strategy and the "We Love Forests" campaign that mobilized 6,000+ young professionals.</p>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="tag">Keynote</span>
+                            <span class="tag">World Forestry Congress</span>
+                            <span class="tag">Youth Engagement</span>
+                            <span class="tag">UN Session</span>
+                        </div>
+
+                        <div class="pub-actions">
+                            <a href="http://www.youtube.com/watch?v=yglGnU2Yn04" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <i class="fas fa-video"></i> Watch Tree Talk
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </div>
             
             <!-- Load More Button -->
@@ -514,6 +891,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
@@ -563,6 +942,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="assets/js/forest-loader.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/pages/publications.js"></script>
